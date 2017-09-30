@@ -715,6 +715,12 @@ input:-ms-input-placeholder {
 .single_work_colum{
 	padding:0;
 }
+
+.shrink:hover {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
 .single_work img{
 	width:100%;
 }
