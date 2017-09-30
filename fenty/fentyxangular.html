@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--ng-app links to module --> 
+<html ng-app="store">
+
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta content="utf-8" http-equiv="encoding">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="fentyxangular.css">
+		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Petit+Formal+Script|Pontano+Sans|Rajdhani" rel="stylesheet">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body id='grad'>
+		<p id="header" class="rows">
+			<img src="images/logo.png" style="max-width: inherit; margin-left: 10%;" />
+			<!--
+			add shopping cart
+			-->
+			<img src="images/fenty_cart.png" style="width: 13%;" />
+		</p>
+		<div id="display-products" ng-controller="StoreController as store">
+		<!--as is keyword
+		store is alias-->
+			<p id="display-products-banner"> What We've Got: <p>
+			<div class="item-display">
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="product in store.product" ng-hide="store.product.soldOut">
+						<product-title></product-title>
+						<div class="product-meat outer-meat">
+							<div class="columns product-preview">
+								<product-gallery></product-gallery>
+								<br><br>
+								<purchase-product></purchase-product>
+							</div>
+							<!--tabs-->
+							<product-tabs></product-tabs>
+						</div>
+					</li>
+				</ul>
+				<div id="end"></div>
+			</div>
+			<script type="text/javascript" src="angular.min.js"></script>
+			<script type="text/javascript" src="app.js"></script> 	
+			<script type="text/javascript" src="product.js"></script>
+		</div>
+	</body>
+
+</html>

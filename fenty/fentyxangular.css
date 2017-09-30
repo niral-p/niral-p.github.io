@@ -1,0 +1,191 @@
+/* * {
+	background-color: rgba(20, 0, 0, .1);
+}
+* /
+
+
+/* general stuff */
+body {
+	background-color: #323232;
+}
+
+#grad {
+    background: #323232; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#323232, #F9AA87); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#323232, #F9AA87); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#323232, #F9AA87); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#323232, #F9AA87); /* Standard syntax */
+}
+
+.rows {
+	display: flex;
+	flex-direction: row;
+}
+
+/* header */
+#header {
+	text-align: center;
+	margin-top: 2%;
+	margin-right: 10%;	
+}
+
+/* main display */
+#display-products {
+	background-color: white;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#display-products-banner {
+	margin-left: 10px;
+	font-size: 30px;
+	font-family: "Pontano Sans";
+}
+
+.list-group {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+/* product item */
+.columns {
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+}
+
+.list-group-item {
+	width: 90%;
+	margin-right: 40px;
+	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.title {
+	font-family: "Permanent Marker";
+	font-size: 30px; 
+}
+
+#price {
+	font-family: "Sarabun";
+	font-size: 30px;
+}
+
+.product-meat {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.outer-meat {
+	flex-wrap: wrap;
+}
+
+#adding {
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+}
+
+#adding div {
+	width: 30px;
+	text-align: center;
+}
+
+.how-many {
+	width: 20px;
+	color: white;
+	background-color: black;
+	text-align: center;
+}
+
+button, #submit {
+	display: inline;
+	font-family: "Sarabun";
+	border-style: none;
+	font-size: 20px;
+}
+
+
+.tabs {
+	display: flex;
+	width: 40%;
+	flex-direction: column;
+	list-style-type: none;
+	margin-top: -20px;
+	margin-right: -10px;
+}
+
+.tabs li {
+	justify-content: center;
+	width: auto;
+	margin-top: 30px;
+	margin-right: 7%;
+	margin-left: -20%;
+	text-align: center;
+}
+
+.selected {
+	background-color: #F9AA87;
+}
+
+.selected:hover a {
+	color: white;
+}
+
+.tabs li a {
+	text-decoration: none;
+	color: black;
+	font-family: "Sarabun";
+	font-size: 130%;
+}
+
+.tabs li:hover {
+	background-color: #F9AA87;
+}
+
+.tabs li:hover a {
+	color: white;
+	font-weight: 2px;
+}
+
+
+.left-align {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.info-display {
+	outline: 2px solid #F9AA87;
+	padding: 5px 10px 5px 10px;
+	max-width: 100%;
+	background-color: rgba(255,255,255, .2);
+}
+
+#new-review {
+	border-color: black;
+}
+
+.reviews {
+	width: 100%;
+}
+
+textarea {
+	resize: none;
+}
+
+.ng-invalid.ng-dirty {
+	border-color: #FA7F7E;
+}
+
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+
+textarea:focus, input:focus {
+	outline: none;
+}

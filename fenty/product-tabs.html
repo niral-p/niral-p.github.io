@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+	<section class="product-meat">
+		<ul class="tabs">
+			<li ng-class="{ active:tab.isSet(1), selected: tab.isSet(1)}">
+				<a href ng-click="tab.setTab(1)">Description</a>
+			</li>
+			<li ng-class="{ active:tab.isSet(2), selected: tab.isSet(2)}">
+				<a href ng-click="tab.setTab(2)"> Use With </a>
+			</li>
+			<li ng-class="{ active:setTab(3), selected: tab.isSet(3)}">
+				<a href ng-click="tab.setTab(3)"> Reviews </a>
+			</li>
+		</ul>
+
+		<!--all possible tabs being shown -->
+		<div class="info-display" style="width: 500px; height: 300px; overflow-y: auto;" >
+			<div ng-show="tab.isTab(1)"> 
+				<h2 style="font-family: Petit Formal Script"> 	
+					 Description
+				</h2> 
+				<blockquote style="font-family: Sarabun; font-size: 25px;">{{product.description}}
+				</blockquote>
+			</div>
+			<div ng-show="tab.isTab(2)"> 
+				<h2 style="font-family: Petit Formal Script"> 
+					Many Things 
+				</h2> 
+				<blockquote></blockquote>
+			</div>
+			<div ng-show="tab.isTab(3)"> 
+				<h2 style="font-family: Petit Formal Script"> Reviews: </h2> 
+				<!--display existing ratings -->
+				<blockquote ng-repeat="review in product.reviews">
+					<b> Rating: {{review.stars}} </b> <br>
+					{{review.entry}} <br>
+					<cite> Written by: {{review.author}} on {{review.createdOn | date}}</cite>
+				</blockquote>
+				<b style="color: #F9AA87;">What do YOU think? </b>
+				<!--live preview-->
+				<form name="reviewPlan" id="new-review" ng-controller="ReviewController as reviewCtrl" ng-submit=" reviewPlan.$valid && reviewCtrl.addReview(product)" novalidate="">
+					<b> Stars: {{reviewCtrl.review.stars}} </b> <br>
+					<b> This product is...</b>{{reviewCtrl.review.entry}} <br>
+					<cite> Written by: {{reviewCtrl.review.author}}</cite> <br><br>
+				<!--form-->
+					Stars: <select name="Stars">
+						<option value="1"> 1 </option>
+						<option value="2"> 2 </option>
+						<option value="3"> 3 </option>
+						<option value="4"> 4 </option>
+						<option value="5"> 5 </option>
+					</select> <br>
+					<textarea class="reviews" ng-model="reviewCtrl.review.entry" placeholder="Love it? Hate it?" required></textarea> <br>
+					<label>Written by: </label><br>
+					<input class="reviews" ng-model="reviewCtrl.review.author" type="email" placeholder="riri@fenty.com" required /> <br> <br>
+					<input type="submit" name="Submit" value="Leave Review">
+				</form>
+			</div>
+		</div>
+	</section>
