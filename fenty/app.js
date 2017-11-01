@@ -21,13 +21,11 @@
 
 		this.increaseCount = function() {
 			this.count += 1;
-			$scope.counter = updateCounter.setCurrentCount(updateCounter.getCurrentCount + 1);
 		};
 
 		this.decreaseCount = function() {
 			if( this.count > 0 ) {
 				this.count -= 1;
-				$scope.counter = updateCounter.setCurrentCount(updateCounter.getCurrentCount - 1);
 			};
 		};
 	});
