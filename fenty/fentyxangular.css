@@ -146,7 +146,7 @@ button, #submit {
 	background-color: #F9AA87;
 }
 
-.tabs li:hover a {
+.tabs li:hover a, active a {
 	color: white;
 	font-weight: 2px;
 }
