@@ -16,16 +16,16 @@
 		this.product = products;
 	});
 
-	app.controller('CountController', function(){
-		this.count = 0;
+	app.controller('CountController', function($scope){
+		$scope.count = 0;
 
-		this.increaseCount = function() {
-			this.count += 1;
+		$scope.increaseCount = function() {
+			$scope.count += 1;
 		};
 
-		this.decreaseCount = function() {
-			if( this.count > 0 ) {
-				this.count -= 1;
+		$scope.decreaseCount = function() {
+			if( $scope.count > 0 ) {
+				$scope.count -= 1;
 			};
 		};
 	});
