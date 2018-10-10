@@ -47,6 +47,7 @@
 					thumb: "images/foundation.jpg",
 				}
 			],
+			related: ["Pro Filt'r Primer"],
 			reviews: [
 				{
 					stars:4,
@@ -74,6 +75,7 @@
 					thumb: "images/primer.jpg",
 				}
 			],
+			related: ["Pro Filt'r Foundation"],
 			reviews: [
 				{
 					stars:4,
@@ -101,6 +103,7 @@
 					thumb: "images/gloss.jpg",
 				}
 			],
+			related: ["Pro Filt'r Primer", "Invisimatte Blotting Powder"],
 			reviews: [
 				{
 					stars:4,
@@ -128,6 +131,7 @@
 					thumb: "images/powder.jpg",
 				}
 			],
+			related: ["Gloss Bomb Lip Luminizer"],
 			reviews: [
 				{
 					stars:4,
@@ -155,6 +159,7 @@
 					thumb: "images/highlight.jpg",
 				}
 			],
+			related: ["Gloss Bomb Lip Luminizer", "Invisimatte Blotting Powder"],
 			reviews: [
 				{
 					stars:4,
