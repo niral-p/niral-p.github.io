@@ -15,20 +15,20 @@
 		<!--all possible tabs being shown -->
 		<div class="info-display" style="width: 500px; height: 300px; overflow-y: auto;" >
 			<div ng-show="tab.isTab(1)"> 
-				<h2 style="font-family: Petit Formal Script"> 	
+				<h3 style="font-family: Petit Formal Script"> 	
 					 Description
-				</h2> 
+				</h3> 
 				<blockquote style="font-family: Sarabun; font-size: 25px;">{{product.description}}
 				</blockquote>
 			</div>
 			<div ng-show="tab.isTab(2)"> 
-				<h2 style="font-family: Petit Formal Script"> 
+				<h3 style="font-family: Petit Formal Script"> 
 					Many Things 
-				</h2> 
+				</h3> 
 				<blockquote></blockquote>
 			</div>
 			<div ng-show="tab.isTab(3)"> 
-				<h2 style="font-family: Petit Formal Script"> Reviews: </h2> 
+				<h3 style="font-family: Petit Formal Script"> Reviews: </h3> 
 				<!--display existing ratings -->
 				<blockquote ng-repeat="review in product.reviews">
 					<b> Rating: {{review.stars}} </b> <br>
