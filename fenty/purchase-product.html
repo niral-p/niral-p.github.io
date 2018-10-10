@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 	<div id="adding" ng-show="product.canPurchase" ng-controller="CountController as countCtrl">
-		<button class="how-many" ng-click="countCtrl.decreaseCount"> - </button>
-		<div> {{countCtrl.count}}</div>
-		<button class="how-many" ng-click="countCtrl.increaseCount"> + </button>
+		<button class="how-many" ng-click="decreaseCount()"> - </button>
+		<div> {{count}}</div>
+		<button class="how-many" ng-click="increaseCount()"> + </button>
 		<button>
 			Buy Now
 		</button>
